@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirboxDemo", "AirboxDemo\AirboxDemo.csproj", "{9654D823-063D-43B1-ABEF-40B08A9C5AC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirboxDemoTests", "AirboxDemoTests\AirboxDemoTests.csproj", "{73A49C5E-CCB6-45A7-B7AC-69BD864C75B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +15,13 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9654D823-063D-43B1-ABEF-40B08A9C5AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9654D823-063D-43B1-ABEF-40B08A9C5AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9654D823-063D-43B1-ABEF-40B08A9C5AC4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{9654D823-063D-43B1-ABEF-40B08A9C5AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9654D823-063D-43B1-ABEF-40B08A9C5AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A49C5E-CCB6-45A7-B7AC-69BD864C75B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A49C5E-CCB6-45A7-B7AC-69BD864C75B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A49C5E-CCB6-45A7-B7AC-69BD864C75B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A49C5E-CCB6-45A7-B7AC-69BD864C75B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

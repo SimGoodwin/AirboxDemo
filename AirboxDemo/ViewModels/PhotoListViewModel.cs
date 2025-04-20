@@ -26,13 +26,13 @@ namespace AirboxDemo.ViewModels
             SetImages();           
         }
 
-        internal void SetView(SelectedPhotoType photoType)
+        public void SetView(SelectedPhotoType photoType)
         {
             settings.PhotoType = photoType;            
             SetImages();
         }
 
-        private void SetImages()
+        public void SetImages()
         { 
             Images.Clear();
             foreach (var file in files.GetAllImages(settings.PhotoType))
