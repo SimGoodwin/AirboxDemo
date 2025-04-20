@@ -3,13 +3,13 @@
     x:Class="AirboxDemo.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AirboxDemo"
+    xmlns:pages="clr-namespace:AirboxDemo.Pages"
     Shell.FlyoutBehavior="Flyout"
     Title="AirboxDemo">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate pages:PhotoListPage}"
         Route="MainPage" />
 
 </Shell>
