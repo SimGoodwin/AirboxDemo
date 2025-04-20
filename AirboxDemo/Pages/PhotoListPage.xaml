@@ -29,7 +29,7 @@
         <CollectionView Grid.Row="1"
                         VerticalOptions="Fill"
                         SelectionMode="Single"
-                        SelectionChanged="PhotoList_SelectionChanged"
+                        SelectionChanged="PhotoList_SelectionChangedAsync"
                         ItemsSource="{Binding Images}"
                         ItemsLayout="VerticalGrid, 3">
             <CollectionView.ItemTemplate>

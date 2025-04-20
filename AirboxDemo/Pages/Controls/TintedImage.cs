@@ -11,7 +11,11 @@ namespace AirboxDemo.Pages.Controls
     /// Class to override the colour of an image
     /// </summary>
     internal class TintedImage : Image
-    {
+    { 
+        public static readonly BindableProperty TintColorProperty = BindableProperty.Create(
+            nameof(TintColor), typeof(Color), typeof(TintedImage), Colors.Transparent, 
+            BindingMode.TwoWay, propertyChanged: OnTintColorPropertyChanged);
+
         /// <summary>
         /// New image colour
         /// </summary>
@@ -21,13 +25,16 @@ namespace AirboxDemo.Pages.Controls
             set => SetValue(TintColorProperty, value);
         }
 
-        public static readonly BindableProperty TintColorProperty = BindableProperty.Create(
-            nameof(TintColor), typeof(Color), typeof(TintedImage), Colors.Transparent, BindingMode.TwoWay, propertyChanged: OnTintColorPropertyChanged);
-
+        /// <summary>
+        /// Update an image's tint colour
+        /// </summary>
+        /// <param name="bindable">Image</param>
+        /// <param name="oldValue">Old colour</param>
+        /// <param name="newValue">New colour</param>
         private static void OnTintColorPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var conrol = (TintedImage)bindable;
-            conrol.Behaviors.Add(new IconTintColorBehavior { TintColor = (Color)newValue });
+            var control = (TintedImage)bindable;
+            control.Behaviors.Add(new IconTintColorBehavior { TintColor = (Color)newValue });
         }
     }
 }

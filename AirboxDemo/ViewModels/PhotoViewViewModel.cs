@@ -12,6 +12,10 @@ namespace AirboxDemo.ViewModels
         [ObservableProperty]
         public partial ImageFile Image { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="image">Image</param>
         public PhotoViewViewModel(ImageFile image)
         {
             Image = image;

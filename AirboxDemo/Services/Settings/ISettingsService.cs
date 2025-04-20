@@ -8,6 +8,9 @@ namespace AirboxDemo.Services.Settings
 {
     public interface ISettingsService
     {
+        /// <summary>
+        /// Type of photo selected by user
+        /// </summary>
         SelectedPhotoType PhotoType { get; set; }
     }
 }

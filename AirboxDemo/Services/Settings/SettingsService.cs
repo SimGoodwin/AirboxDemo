@@ -14,6 +14,7 @@ namespace AirboxDemo.Services.Settings
         private const string PHOTO_TYPE_KEY = "gs_photo_type";
         private const int PHOTO_TYPE_DEFAULT = (int)SelectedPhotoType.None;
 
+        /// <inheritdoc cref="ISettingsService.PhotoType" />
         public SelectedPhotoType PhotoType
         {
             get => (SelectedPhotoType)Preferences.Default.Get(PHOTO_TYPE_KEY, PHOTO_TYPE_DEFAULT, AIRBOX_SHARED_KEY);
@@ -21,6 +22,10 @@ namespace AirboxDemo.Services.Settings
         }
     }
 
+    /// <summary>
+    /// Types of photo the app supports
+    /// Use the description attribute to set a translation
+    /// </summary>
     public enum SelectedPhotoType
     {
         [Description("EnumSelectedPhotoTypeNone")]

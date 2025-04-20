@@ -19,6 +19,11 @@ namespace AirboxDemo.ViewModels
         private readonly ISettingsService settings;
         private readonly IFileService files;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settingService">App settings</param>
+        /// <param name="fileService">File service</param>
         public PhotoListViewModel(ISettingsService settingService, IFileService fileService)
         {
             settings = settingService;
@@ -26,12 +31,22 @@ namespace AirboxDemo.ViewModels
             SetImages();           
         }
 
+        /// <summary>
+        /// Change the type of images displayed 
+        /// </summary>
+        /// <param name="photoType">Type of images to display</param>
         public void SetView(SelectedPhotoType photoType)
         {
+            if (settings.PhotoType == photoType)
+                return;
+
             settings.PhotoType = photoType;            
             SetImages();
         }
 
+        /// <summary>
+        /// Get all images of the type set in settings
+        /// </summary>
         public void SetImages()
         { 
             Images.Clear();
@@ -41,7 +56,12 @@ namespace AirboxDemo.ViewModels
             }
         }
 
-        internal async Task DisplayImage(ImageFile image)
+        /// <summary>
+        /// Open a new page for the selected image
+        /// </summary>
+        /// <param name="image">Chosen image</param>
+        /// <returns>Awaitable task opening an image view page</returns>
+        internal async Task DisplayImageAsync(ImageFile image)
         {
             await Shell.Current.Navigation.PushAsync(new PhotoViewPage(image));
         }
