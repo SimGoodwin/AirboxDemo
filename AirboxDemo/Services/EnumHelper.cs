@@ -32,6 +32,11 @@ namespace AirboxDemo.Services
             return Enum.GetValues<T>().Where(x => x.GetTranslation() == translation).First();
         }
 
+        /// <summary>
+        /// Get the translation of an enum
+        /// </summary>
+        /// <param name="value">Enum to translate</param>
+        /// <returns>Translation if it exists or null otherwise</returns>
         public static string? GetTranslation(this Enum value)
         {
             var type = value.GetType();
@@ -45,6 +50,11 @@ namespace AirboxDemo.Services
                 : null;
         }
 
+        /// <summary>
+        /// Get the translation for a string value
+        /// </summary>
+        /// <param name="stringName">String resource name</param>
+        /// <returns>Translation if it exists or null</returns>
         private static string? GetTranslatedString(string stringName)
         {
             if (stringName == null) 

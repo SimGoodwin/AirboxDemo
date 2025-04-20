@@ -8,6 +8,9 @@ namespace AirboxDemoTests
 {
     public class UnitTest
     {
+        /// <summary>
+        /// Example unit test including mocking services
+        /// </summary>
         [Fact]
         public void SampleTest()
         {

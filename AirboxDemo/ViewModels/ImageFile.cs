@@ -12,6 +12,10 @@ namespace AirboxDemo.ViewModels
         [ObservableProperty]
         public partial ImageSource Source { get; set; }
 
+        /// <summary>
+        /// An observable image controller
+        /// </summary>
+        /// <param name="source">Image source</param>
         public ImageFile(ImageSource source)
         {
             Source = source;

@@ -8,6 +8,7 @@ namespace AirboxDemo.Services.Settings
 {
     public class FileService : IFileService
     {
+        /// <inheritdoc cref="IFileService.GetAllImages(SelectedPhotoType)" />
         public IEnumerable<ImageSource> GetAllImages(SelectedPhotoType photoType)
         {
             var images = new List<ImageSource>();

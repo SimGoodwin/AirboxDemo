@@ -30,6 +30,11 @@ namespace AirboxDemo
             return builder.Build();
         }
 
+        /// <summary>
+        /// Register services for DI
+        /// </summary>
+        /// <param name="mauiAppBuilder">Builder</param>
+        /// <returns>Builder</returns>
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
             mauiAppBuilder.Services.AddTransient<ISettingsService, SettingsService>();
@@ -39,6 +44,11 @@ namespace AirboxDemo
             return mauiAppBuilder;
         }
 
+        /// <summary>
+        /// Register view models for DI
+        /// </summary>
+        /// <param name="mauiAppBuilder">Builder</param>
+        /// <returns>Builder</returns>
         public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
         {
             mauiAppBuilder.Services.AddSingleton<PhotoListViewModel>();
@@ -47,6 +57,11 @@ namespace AirboxDemo
             return mauiAppBuilder;
         }
 
+        /// <summary>
+        /// Register views for DI
+        /// </summary>
+        /// <param name="mauiAppBuilder">Builder</param>
+        /// <returns>Builder</returns>
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
             mauiAppBuilder.Services.AddSingleton<PhotoListPage>();
