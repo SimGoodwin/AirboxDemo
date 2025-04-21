@@ -61,7 +61,7 @@ namespace AirboxDemo.Resources.Text {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Boat.
+        ///   Looks up a localized string similar to Boats.
         /// </summary>
         internal static string EnumSelectedPhotoTypeBoat {
             get {
@@ -70,7 +70,7 @@ namespace AirboxDemo.Resources.Text {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Car.
+        ///   Looks up a localized string similar to Cars.
         /// </summary>
         internal static string EnumSelectedPhotoTypeCar {
             get {
@@ -79,7 +79,7 @@ namespace AirboxDemo.Resources.Text {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helicopter.
+        ///   Looks up a localized string similar to Helicopters.
         /// </summary>
         internal static string EnumSelectedPhotoTypeHelicopter {
             get {

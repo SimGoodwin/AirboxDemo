@@ -4,10 +4,36 @@
              x:Class="AirboxDemo.Pages.PhotoViewPage"
              xmlns:strings="clr-namespace:AirboxDemo.Resources.Text"
              xmlns:local="clr-namespace:AirboxDemo.ViewModels"
+             xmlns:controls="clr-namespace:AirboxDemo.Pages.Controls"
              x:DataType="local:PhotoViewViewModel"
              Title="{x:Static strings:AppText.PhotoViewPageHeading}">
     
-    <Grid>
-        <Image Source="{Binding Image.Source}"/>
+    <Grid RowDefinitions="*, Auto"
+          Margin="12">
+        <Image x:Name="ChosenImage"
+               Source="{Binding Image.Source}"/>
+        
+        <!--Animation controls-->
+        <Grid Grid.Row="1"
+              ColumnDefinitions="*, Auto, *, Auto, *"
+              Margin="12">
+            
+            <controls:TintedImage Grid.Column="1"
+                                  Source="turn_left"
+                                  TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}">
+                <controls:TintedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TurnLeft_Tapped"/>
+                </controls:TintedImage.GestureRecognizers>                
+            </controls:TintedImage>
+
+            <controls:TintedImage Grid.Column="3"
+                                  Source="turn_right"
+                                  TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}">
+                <controls:TintedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TurnRight_Tapped"/>
+                </controls:TintedImage.GestureRecognizers>
+            </controls:TintedImage>
+
+        </Grid>
     </Grid>
 </ContentPage>
