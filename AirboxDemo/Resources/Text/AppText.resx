@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EnumSelectedPhotoTypeBoat" xml:space="preserve">
-    <value>Boat</value>
+    <value>Boats</value>
   </data>
   <data name="EnumSelectedPhotoTypeCar" xml:space="preserve">
-    <value>Car</value>
+    <value>Cars</value>
   </data>
   <data name="EnumSelectedPhotoTypeHelicopter" xml:space="preserve">
-    <value>Helicopter</value>
+    <value>Helicopters</value>
   </data>
   <data name="EnumSelectedPhotoTypeNone" xml:space="preserve">
     <value>None</value>
