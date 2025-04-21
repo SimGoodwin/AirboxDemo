@@ -7,7 +7,7 @@
              xmlns:controls="clr-namespace:AirboxDemo.Pages.Controls"
              x:DataType="local:PhotoViewViewModel"
              Title="{x:Static strings:AppText.PhotoViewPageHeading}">
-    
+
     <Grid RowDefinitions="*, Auto"
           Margin="12">
         <Image x:Name="ChosenImage"
@@ -19,7 +19,9 @@
               Margin="12">
             
             <controls:TintedImage Grid.Column="1"
-                                  Source="turn_left"
+                                  HeightRequest="48"
+                                  WidthRequest="48"
+                                  Source="turn_left.png"
                                   TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}">
                 <controls:TintedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TurnLeft_Tapped"/>
@@ -27,7 +29,7 @@
             </controls:TintedImage>
 
             <controls:TintedImage Grid.Column="3"
-                                  Source="turn_right"
+                                  Source="turn_right.png"
                                   TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}">
                 <controls:TintedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TurnRight_Tapped"/>
